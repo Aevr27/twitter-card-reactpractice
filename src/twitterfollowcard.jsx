@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { useState } from 'react'
 
 export default function TwitterFollowCard({ userName = 'unknown', children, initialIsFollowing}) {
@@ -33,7 +32,8 @@ export default function TwitterFollowCard({ userName = 'unknown', children, init
 
             <aside>
                 <button className={buttonClassName} onClick={handleClick}>
-                {text}
+                <span className='tw-followCard-text'>{text}</span>
+                <span className='tw-followCard-stopFollow'>Dejar de seguir</span>
                 </button>
             </aside>
         </article>
